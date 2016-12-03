@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from './Header';
+import Header from '../components/Header';
 
-export default class Layout extends React.Component {
+export default class Home extends React.Component {
 
     constructor() {
         super();
@@ -21,7 +21,7 @@ export default class Layout extends React.Component {
         return(
             <div>
                 <Header changeTitle={this.changeTitle.bind(this)} name={'Testong'} title={this.state.title}/>
-                Content
+                Home
             </div>
         );
     }

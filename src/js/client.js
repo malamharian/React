@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-import Layout from './components/Layout';
+import App from './App';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import About from './pages/About';
 
-ReactDOM.render(<Layout/>, document.getElementById('app'));
+ReactDOM.render(
+    <Router history={hashHistory}>
+        <Route path="/" component={App}>
+            <IndexRoute component={Home}></IndexRoute>
+            <Route path="products" component={Products}></Route>
+            <Route path="about" component={About}></Route>
+        </Route>
+    </Router>,
+    document.getElementById('app')
+);
 
 module.hot.accept(() => {});
