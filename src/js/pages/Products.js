@@ -20,6 +20,7 @@ export default class Products extends React.Component {
     render() {
         return(
             <div>
+                {this.props.children}
                 <Header changeTitle={this.changeTitle.bind(this)} name={'Testong'} title={this.state.title}/>
                 Products
             </div>

@@ -35,6 +35,7 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
     ],
     devServer: {
+        historyApiFallback: true,
         hot: true,
         contentBase: './src'
     }
