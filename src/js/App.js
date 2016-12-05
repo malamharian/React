@@ -16,9 +16,10 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
-                <button onClick={this.navigateHome.bind(this)}>Home</button>
-                <Link to="products">Products</Link>
-                <Link to="about">About</Link>
+                <button onClick={this.navigateHome.bind(this)}>Home</button> |
+                <Link to="/products">Products</Link> |
+                <Link to="/about">About</Link> |
+                <Link to="/products/asd">About2</Link>
                 {this.props.children}
             </div>
         );
